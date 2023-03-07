@@ -107,7 +107,8 @@ body, html {
     height: 70px;
     padding: 10px;
     background-color: white;
-    border-radius: 25px;
+    border-bottom-left-radius: 25px;
+    border-bottom-right-radius: 25px;
 }
 
 #text input[type=text] {
@@ -128,4 +129,55 @@ body, html {
     box-sizing: content-box;
     padding-top: 5px;
     cursor: pointer;
+}
+
+.bubble {
+    position: relative;
+    background: #343344;
+    color: #FFFFFF;
+    font-size: 14px;
+    text-align: left;
+    width: 100%;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 0px;
+    display: inline-block;
+}
+
+.bubble:after {
+    content: '';
+    position: absolute;
+    display: block;
+    width: 0;
+    z-index: 1;
+    border-style: solid;
+    border-color: transparent #343344;
+    border-width: 8px 8px 8px 0;
+    top: 20px;
+    left: -8px;
+    margin-top: -8px;
+}
+
+.chatLine {
+    display: flex;
+    width: 100%;
+    padding: 20px;
+  }
+  
+.chatLine > div:first-of-type {
+    width: 80px;
+}
+
+.chatLine > div:first-of-type img {
+    border-radius: 50%;
+}
+  
+.chatLine > div:last-of-type { 
+    flex-grow: 1;
+    width: 100%;
+    padding: 10px;
+  }  
+
+  *:focus {
+    outline: none;
 }
