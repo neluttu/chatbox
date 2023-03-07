@@ -22,40 +22,45 @@ body, html {
     border-radius: 15px;
     -webkit-box-shadow: 0px 11px 27px 5px rgba(39,39,52,0.79); 
     box-shadow: 0px 11px 27px 5px rgba(39,39,52,0.79);
+    overflow: hidden;
+    position: relative;
 }
 
 .header {
     background-color: #f85e62;
     width: 100%;
     height: 84px;
-    border-top-right-radius: 15px;
-    border-top-left-radius: 15px;
     color: white;
     padding: 20px;
     font-weight: 500;
     font-size: 17px;
+    position: relative;
 }
 
 .header small {
     font-size: 14px;
     font-weight: 200;
-    position: relative;
 }
 
-.header > div {
-    margin-left: 120px;
+.header > div:first-of-type {
+    display: inline-block;
+}
+
+.header > div:last-of-type {
+    display: inline-block;
+    vertical-align: top;
+    margin-left: 10px;
 }
 
 .header img {
-    float: left;
-    margin-right: 20px;
-    border-radius:50%; 
-    position: absolute;
+    border-radius:50%;
+    border:2px solid white;
 }
 
 .header img:not(:first-of-type) {
-    margin-left: 30px;
+    margin-left: -25px;
 }
+
 
 #chat {
     background-color: #252433;
@@ -67,10 +72,10 @@ body, html {
     background-color: #343344;
     width: 100%;
     padding: 30px;
-    border-bottom-right-radius: 15px;
-    border-bottom-left-radius: 15px;
     color: white;
     font-size: 14px;
+    position: absolute;
+    bottom: 0;
 
 }
 
@@ -93,5 +98,34 @@ body, html {
 .notice button:hover {
     background-color: #f86266;
     color: white;
+    cursor: pointer;
+}
+
+#text {
+    width: 100%;
+    margin: auto;
+    height: 70px;
+    padding: 10px;
+    background-color: white;
+    border-radius: 25px;
+}
+
+#text input[type=text] {
+    border:1px solid white;
+    margin-top: 4px;
+    padding: 10px;
+    font-size: 18px;
+    width: 80%;
+}
+
+#text ::placeholder {
+    color: rgb(167, 167, 167);
+}
+
+#text svg {
+    float: right;
+    padding-right: 10px;
+    box-sizing: content-box;
+    padding-top: 5px;
     cursor: pointer;
 }

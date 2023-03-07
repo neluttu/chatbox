@@ -4,7 +4,7 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Big(Mac) Menu - iCodeThis.com</title>
+        <title>Chat - iCodeThis.com</title>
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;1,100;1,200&display=swap" rel="stylesheet">
@@ -14,19 +14,35 @@
     <body>
         <div id="container">
             <div class="header">
-                <img src="https://pbs.twimg.com/profile_images/1602443868527595520/cOjnC2Zh_400x400.jpg" width="50">
-                <img src="https://pbs.twimg.com/profile_images/1602443868527595520/cOjnC2Zh_400x400.jpg" width="50">
-                <img src="https://pbs.twimg.com/profile_images/1602443868527595520/cOjnC2Zh_400x400.jpg" width="50">
+                <div class="users">
+                    <img src="https://pbs.twimg.com/profile_images/1602443868527595520/cOjnC2Zh_400x400.jpg" width="50">
+                    <img src="https://pbs.twimg.com/profile_images/1590968738358079488/IY9Gx6Ok_400x400.jpg" width="50">
+                    <img src="https://pbs.twimg.com/profile_images/923274881197895680/AbHcStkl_400x400.jpg" width="50">
+                </div>
                 <div>
                     Elnora, Leila, Lucinda<br>
                     <small>We tipically respond in a few minutes</small>
                 </div>
             </div>
             <div id="chat"></div>
+            <div id="text">
+                <input type="text" placeholder="Type your message here...">
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-send" width="36" height="36" viewBox="0 0 24 24" stroke-width="1.5" stroke="#b1afad" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                    <line x1="10" y1="14" x2="21" y2="3" />
+                    <path d="M21 3l-6.5 18a0.55 .55 0 0 1 -1 0l-3.5 -7l-7 -3.5a0.55 .55 0 0 1 0 -1l18 -6.5" />
+                  </svg>
+            </div>
             <div class="notice">
                 By using the chat, I confirm that I have read the <a href="#">privacy policy</a> and do not object to the use of my personal data.
-                <button>I agree</button>
+                <button id="close">I agree</button>
             </div>
+            <script>
+                //$('.notice').hide();
+                $("#close").click(function(){
+                    $(".notice").slideToggle();
+                });
+            </script>
         </div>
     </body>
 </html>
