@@ -65,7 +65,8 @@ body, html {
 #chat {
     background-color: #252433;
     width: 460px;
-    min-height: 400px;
+    height: 600px;
+    overflow-y: auto;
 }
 
 .notice {
@@ -129,6 +130,11 @@ body, html {
     box-sizing: content-box;
     padding-top: 5px;
     cursor: pointer;
+    transition: all .3s ease;
+}
+
+#text svg:hover {
+    stroke: #f85e62;
 }
 
 .bubble {
@@ -158,26 +164,63 @@ body, html {
     margin-top: -8px;
 }
 
+.bubble2 {
+    position: relative;
+    background: #343344;
+    color: #FFFFFF;
+    font-size: 14px;
+    text-align: left;
+    width: 100%;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 0px;
+    display: inline-block;
+}
+
+.bubble2:before {
+    content: '';
+    position: absolute;
+    display: block;
+    width: 0;
+    z-index: 1;
+    border-style: solid;
+    border-color: transparent #343344;
+    border-width: 8px 0px 8px 8px;
+    top: 20px;
+    right: -8px;
+    margin-top: -8px;
+}
+
 .chatLine {
     display: flex;
     width: 100%;
-    padding: 20px;
+    padding: 10px 20px;
   }
   
-.chatLine > div:first-of-type {
-    width: 80px;
+.chatLine > div {
+    flex-grow: 1;
 }
 
-.chatLine > div:first-of-type img {
+.chatLine > div.myself {
+    max-width: 90px;
+}
+
+.chatLine > div.operator {
+    max-width: 90px;
+}
+
+.chatLine > div img {
     border-radius: 50%;
+    border:2px solid white;
+    margin-right: 20px;
 }
   
-.chatLine > div:last-of-type { 
-    flex-grow: 1;
-    width: 100%;
-    padding: 10px;
-  }  
-
+.chatLine > div img.reverse {
+    border-radius: 50%;
+    border:2px solid white;
+    margin-left: 20px;
+}
+  
   *:focus {
     outline: none;
 }
