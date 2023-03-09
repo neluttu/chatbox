@@ -1,6 +1,6 @@
 # chatbox
 iCodeThis.com daily challenge
 
-Demo:
+Screenshot:
 
-https://www.icodethis.com/submissions/4597
+<img src="/screenshot.png">
